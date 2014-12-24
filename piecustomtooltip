@@ -1,0 +1,90 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<style>
+#piechart {
+  top: 0;
+  left: 0;
+  width: 320px;
+  height:300px;
+}
+
+g{
+  cursor:pointer;
+}
+</style>
+<script type="text/javascript">
+ 
+google.load("visualization", "1", {packages:["corechart"]});
+ 
+google.setOnLoadCallback(initChart);
+ 
+$(window).on("resize", function (event) {
+  initChart();
+});
+ 
+function initChart() {
+  var options = {
+    legend:'none',
+    width: '100%',
+    height: '100%',
+    pieSliceText: 'label',
+    tooltip: { text: 'percentage' },
+	is3D: true,
+    chartArea: {
+      left: "3%",
+      top: "3%",
+      height: "94%",
+      width: "94%"
+    }
+  };
+ 
+  var data = google.visualization.arrayToDataTable([
+    ['Risk Factors', 'Percentage'],
+    ['Smoking', 20],
+    ['Alcohol', 10],
+    ['Medicines', 20],
+    ['Diet', 20],
+    ['Lifestyle', 30]
+  ]);
+  drawChart(data, options)
+}
+ 
+function drawChart(data, options) {
+
+  var tooltip = [
+    "Cigarattes and other forms on smokeless tobacco promote osteoporosis",
+    "Excessive alcohol consumption accelerates bone loss",
+    "Chronic steroid use and other medications can promote osteoporosis",
+    "Diet deficient in osteoporosis puts you at risk of osteoporosis",
+    "Lifestyle without exercise increases bone loss and makes muscle weak"
+  ];
+  
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  
+  var sliceid = 0;
+  
+  function eventHandler(e){
+    chart.setSelection([e]);
+    try {
+      selection = chart.getSelection();
+      sliceid = selection[0].row;
+    }
+    catch(err) {
+      ;
+    }
+    $(".google-visualization-tooltip-item-list li:eq(0)").css("font-weight", "bold");
+    $(".google-visualization-tooltip-item-list li:eq(1)").html(tooltip[sliceid]).css("font-family", "Arial");
+  }
+  
+  google.visualization.events.addListener(chart, 'onmouseover', eventHandler);
+  
+  chart.draw(data, options);
+}
+</script>
+</head>
+<body>
+<div id="piechart"></div>
+</body>
+</html>

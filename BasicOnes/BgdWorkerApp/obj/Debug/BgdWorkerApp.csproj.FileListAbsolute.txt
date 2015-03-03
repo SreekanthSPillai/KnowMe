@@ -1,0 +1,4 @@
+C:\Users\BIO187\Source\Repos\BgdWorkerApp\bin\Debug\BgdWorkerApp.exe
+C:\Users\BIO187\Source\Repos\BgdWorkerApp\bin\Debug\BgdWorkerApp.pdb
+C:\Users\BIO187\Source\Repos\BgdWorkerApp\obj\Debug\BgdWorkerApp.exe
+C:\Users\BIO187\Source\Repos\BgdWorkerApp\obj\Debug\BgdWorkerApp.pdb

@@ -1,0 +1,10 @@
+[Modules]
+CLUK Batch Split
+
+[CLUK Batch Split]
+RuntimeProgram=CLUKBatchSplit.EXE
+ModuleID=Kofax.CLUKBatchSplit
+Description=This module splits documents based on their validiity
+Version=10.1
+SupportsNonImageFiles=True
+SupportsTableFields=True

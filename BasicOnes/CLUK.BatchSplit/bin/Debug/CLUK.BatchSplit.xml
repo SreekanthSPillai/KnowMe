@@ -1,0 +1,64 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CLUK.BatchSplit
+</name>
+</assembly>
+<members>
+<member name="P:CLUK.BatchSplit.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:CLUK.BatchSplit.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:CLUK.BatchSplit.My.Resources.Resources.BatchName">
+	<summary>
+  Looks up a localized string similar to Batch name:.
+</summary>
+</member><member name="P:CLUK.BatchSplit.My.Resources.Resources.Caption">
+	<summary>
+  Looks up a localized string similar to Kofax Capture Custom Module.
+</summary>
+</member><member name="P:CLUK.BatchSplit.My.Resources.Resources.DocSplitStatus">
+	<summary>
+  Looks up a localized string similar to .
+</summary>
+</member><member name="P:CLUK.BatchSplit.My.Resources.Resources.DocsStatus">
+	<summary>
+  Looks up a localized string similar to .
+</summary>
+</member><member name="P:CLUK.BatchSplit.My.Resources.Resources.Feature">
+	<summary>
+  Looks up a localized string similar to Custom module. Separates based on validitiy of documents.
+</summary>
+</member><member name="P:CLUK.BatchSplit.My.Resources.Resources.LoosePage">
+	<summary>
+  Looks up a localized string similar to .
+</summary>
+</member><member name="P:CLUK.BatchSplit.My.Resources.Resources.NoBatchesAvailable">
+	<summary>
+  Looks up a localized string similar to No batches available.
+</summary>
+</member><member name="P:CLUK.BatchSplit.My.Resources.Resources.NotRegistered">
+	<summary>
+  Looks up a localized string similar to CLUK BatchSplit module is not registered.
+</summary>
+</member><member name="P:CLUK.BatchSplit.My.Resources.Resources.Status">
+	<summary>
+  Looks up a localized string similar to Status.
+</summary>
+</member><member name="P:CLUK.BatchSplit.My.Resources.Resources.TimeOutMsg">
+	<summary>
+  Looks up a localized string similar to Due to inactivity, your session will time out in {0} minutes. If you are still working with Kofax Capture, click OK to continue..
+</summary>
+</member><member name="T:CLUK.BatchSplit.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

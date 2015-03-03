@@ -1,0 +1,6 @@
+﻿Uninstalling assembly 'C:\Users\BIO187\Source\Repos\ServiceDeployApp\bin\Debug\ServiceDeployApp.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\BIO187\Source\Repos\ServiceDeployApp\bin\Debug\ServiceDeployApp.InstallLog
+   assemblypath = C:\Users\BIO187\Source\Repos\ServiceDeployApp\bin\Debug\ServiceDeployApp.exe
+No public installers with the RunInstallerAttribute.Yes attribute could be found in the C:\Users\BIO187\Source\Repos\ServiceDeployApp\bin\Debug\ServiceDeployApp.exe assembly.

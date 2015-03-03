@@ -1,0 +1,5 @@
+C:\Users\BIO187\Source\Repos\ServiceDeployApp\bin\Debug\ServiceDeployApp.exe.config
+C:\Users\BIO187\Source\Repos\ServiceDeployApp\bin\Debug\ServiceDeployApp.exe
+C:\Users\BIO187\Source\Repos\ServiceDeployApp\bin\Debug\ServiceDeployApp.pdb
+C:\Users\BIO187\Source\Repos\ServiceDeployApp\obj\Debug\ServiceDeployApp.exe
+C:\Users\BIO187\Source\Repos\ServiceDeployApp\obj\Debug\ServiceDeployApp.pdb

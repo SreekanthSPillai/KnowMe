@@ -1,0 +1,15 @@
+C:\Users\BIO187\Source\Repos\CLUK.BatchSplit\obj\Debug\CLUK.BatchSplit.Resources.resources
+C:\Users\BIO187\Source\Repos\CLUK.BatchSplit\obj\Debug\CLUK.BatchSplit.vbproj.GenerateResource.Cache
+C:\Users\BIO187\Source\Repos\CLUK.BatchSplit\bin\Debug\CLUK.BatchSplit.exe.config
+C:\Users\BIO187\Source\Repos\CLUK.BatchSplit\bin\Debug\CLUK.BatchSplit.exe
+C:\Users\BIO187\Source\Repos\CLUK.BatchSplit\bin\Debug\CLUK.BatchSplit.pdb
+C:\Users\BIO187\Source\Repos\CLUK.BatchSplit\bin\Debug\CLUK.BatchSplit.xml
+C:\Users\BIO187\Source\Repos\CLUK.BatchSplit\bin\Debug\Kofax.Capture.SDK.CustomModule.dll
+C:\Users\BIO187\Source\Repos\CLUK.BatchSplit\bin\Debug\Kofax.Capture.SDK.Data.dll
+C:\Users\BIO187\Source\Repos\CLUK.BatchSplit\bin\Debug\Kofax.DBLite.dll
+C:\Users\BIO187\Source\Repos\CLUK.BatchSplit\bin\Debug\Kofax.DBLiteOpt.dll
+C:\Users\BIO187\Source\Repos\CLUK.BatchSplit\bin\Debug\Kofax.SDK.CaptureInfo.dll
+C:\Users\BIO187\Source\Repos\CLUK.BatchSplit\obj\Debug\CLUK.BatchSplit.exe
+C:\Users\BIO187\Source\Repos\CLUK.BatchSplit\obj\Debug\CLUK.BatchSplit.xml
+C:\Users\BIO187\Source\Repos\CLUK.BatchSplit\obj\Debug\CLUK.BatchSplit.pdb
+C:\Users\BIO187\Source\Repos\CLUK.BatchSplit\obj\Debug\CLUK.BatchSplit.CLUK.BatchSplit.frmMain.resources

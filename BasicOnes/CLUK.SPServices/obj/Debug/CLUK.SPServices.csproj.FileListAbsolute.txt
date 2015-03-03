@@ -1,0 +1,5 @@
+C:\Users\BIO187\Source\Repos\CLUK.SPServices\bin\Debug\CLUK.SPServices.dll.config
+C:\Users\BIO187\Source\Repos\CLUK.SPServices\bin\Debug\CLUK.SPServices.dll
+C:\Users\BIO187\Source\Repos\CLUK.SPServices\bin\Debug\CLUK.SPServices.pdb
+C:\Users\BIO187\Source\Repos\CLUK.SPServices\obj\Debug\CLUK.SPServices.dll
+C:\Users\BIO187\Source\Repos\CLUK.SPServices\obj\Debug\CLUK.SPServices.pdb

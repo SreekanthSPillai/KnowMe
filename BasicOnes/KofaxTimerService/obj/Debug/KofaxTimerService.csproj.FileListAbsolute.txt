@@ -9,11 +9,11 @@ C:\Users\BIO187\Source\Repos\KofaxTimerService\obj\Debug\KofaxTimerService.pdb
 C:\Users\BIO187\Source\Repos\KnowMe\BasicOnes\KofaxTimerService\bin\Debug\KofaxTimerService.exe.config
 C:\Users\BIO187\Source\Repos\KnowMe\BasicOnes\KofaxTimerService\bin\Debug\KofaxTimerService.exe
 C:\Users\BIO187\Source\Repos\KnowMe\BasicOnes\KofaxTimerService\bin\Debug\KofaxTimerService.pdb
+C:\Users\BIO187\Source\Repos\KnowMe\BasicOnes\KofaxTimerService\bin\Debug\CLUK.SPServices.dll
+C:\Users\BIO187\Source\Repos\KnowMe\BasicOnes\KofaxTimerService\bin\Debug\CLUK.SPServices.pdb
+C:\Users\BIO187\Source\Repos\KnowMe\BasicOnes\KofaxTimerService\obj\Debug\KofaxTimerService.csprojResolveAssemblyReference.cache
 C:\Users\BIO187\Source\Repos\KnowMe\BasicOnes\KofaxTimerService\obj\Debug\KofaxTimerService.KofaxTimerService.resources
 C:\Users\BIO187\Source\Repos\KnowMe\BasicOnes\KofaxTimerService\obj\Debug\KofaxTimerService.ProjectInstaller.resources
 C:\Users\BIO187\Source\Repos\KnowMe\BasicOnes\KofaxTimerService\obj\Debug\KofaxTimerService.csproj.GenerateResource.Cache
 C:\Users\BIO187\Source\Repos\KnowMe\BasicOnes\KofaxTimerService\obj\Debug\KofaxTimerService.exe
 C:\Users\BIO187\Source\Repos\KnowMe\BasicOnes\KofaxTimerService\obj\Debug\KofaxTimerService.pdb
-C:\Users\BIO187\Source\Repos\KnowMe\BasicOnes\KofaxTimerService\obj\Debug\KofaxTimerService.csprojResolveAssemblyReference.cache
-C:\Users\BIO187\Source\Repos\KnowMe\BasicOnes\KofaxTimerService\bin\Debug\CLUK.SPServices.dll
-C:\Users\BIO187\Source\Repos\KnowMe\BasicOnes\KofaxTimerService\bin\Debug\CLUK.SPServices.pdb

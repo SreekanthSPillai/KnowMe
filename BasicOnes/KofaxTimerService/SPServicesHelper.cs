@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -31,7 +33,7 @@ namespace KofaxTimerService
             lists.Url = "http://clint/it/isdev/_vti_bin/Lists.asmx";
             //lists.Url = "http://xyzteamsite/_vti_bin/Lists.asmx";
 
-            //lists.Credentials = System.Net.CredentialCache.DefaultCredentials;
+            lists.Credentials = System.Net.CredentialCache.DefaultCredentials;
 
             XElement queryOptions = new XElement("QueryOptions",
                 new XElement("Folder"),
@@ -79,14 +81,16 @@ namespace KofaxTimerService
                         }
                     )
             );
-            WriteLog(report.ToStringAlignAttributes());
+            //WriteLog(report.ToStringAlignAttributes());
         
         } 
         
     private void WriteLog(string message) 
     {
         string timeStamp = DateTime.Now.ToString("yyyyMMdd.hhmmss");
-        System.IO.File.AppendAllText(string.Format("Lsit.{0}.log", timeStamp), message + "\r\n");
+        var path = Path.Combine(Path.GetDirectoryName(Assembly.GetCallingAssembly().Location),string.Format("ListService.{0}.log", timeStamp));
+
+        System.IO.File.AppendAllText(path, message + "\r\n");
     }
 
 

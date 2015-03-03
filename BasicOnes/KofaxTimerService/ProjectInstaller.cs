@@ -15,6 +15,10 @@ namespace KofaxTimerService
         {
             InitializeComponent();
 
+            this.KofaxTimerServiceProcessInstaller.Account = System.ServiceProcess.ServiceAccount.User;
+            this.KofaxTimerServiceProcessInstaller.Username = "canadalifeuk\\bio187";
+            this.KofaxTimerServiceProcessInstaller.Password = "Jan@2015$";
+
         }
 
         private void KofaxTimerServiceProcessInstaller_AfterInstall(object sender, InstallEventArgs e)

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,7 +20,6 @@ namespace KofaxTimerService
 
             public DocumentClassificationTask()
             {
-
                 bw.WorkerReportsProgress = true;
                 bw.WorkerSupportsCancellation = true;
                 bw.DoWork += new DoWorkEventHandler(bw_DoWork);
@@ -66,6 +66,11 @@ namespace KofaxTimerService
                             /**************************************/
                             System.Threading.Thread.Sleep(5000);
                             worker.ReportProgress(10, "Document Classification Task First Stop");
+
+                            worker.ReportProgress(15, "Document Classification Task::Querying SPList");
+                            SPServicesHelper helper = new SPServicesHelper();
+                            helper.QueryList();
+
                             System.Threading.Thread.Sleep(5000);
                             worker.ReportProgress(10, "Document Classification Task Second Stop");
                             System.Threading.Thread.Sleep(5000);
@@ -104,7 +109,9 @@ namespace KofaxTimerService
             private void WriteLog(string message)
             {
                 message = string.Format("{0}: {1}\r\n", DateTime.Now, message);
-                File.AppendAllText("C:\\serviceLog.log", message); 
+
+                var path = Path.Combine(Path.GetDirectoryName(Assembly.GetCallingAssembly().Location), "ServiceMessages.log");
+                File.AppendAllText(path, message); 
             }
         
     }

@@ -40,6 +40,8 @@
             // 
             // KofaxTimerServiceInstaller
             // 
+            this.KofaxTimerServiceInstaller.Description = "KofaxTimer Service for polling documents";
+            this.KofaxTimerServiceInstaller.DisplayName = "CLUK.KofaxTimerService";
             this.KofaxTimerServiceInstaller.ServiceName = "CLUK.KofaxTimerService";
             this.KofaxTimerServiceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             this.KofaxTimerServiceInstaller.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.KofaxTimerServiceInstaller_AfterInstall);

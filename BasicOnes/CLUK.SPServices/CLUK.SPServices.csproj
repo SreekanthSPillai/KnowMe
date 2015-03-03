@@ -47,7 +47,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Web References\IsDevListService\Reference.cs">
+    <Compile Include="Web References\ISDevListService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -59,8 +59,8 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Web References\IsDevListService\lists.wsdl" />
-    <None Include="Web References\IsDevListService\Reference.map">
+    <None Include="Web References\ISDevListService\lists.wsdl" />
+    <None Include="Web References\ISDevListService\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -71,7 +71,7 @@
   <ItemGroup>
     <WebReferenceUrl Include="http://clint/it/isdev/_vti_bin/lists.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\IsDevListService\</RelPath>
+      <RelPath>Web References\ISDevListService\</RelPath>
       <UpdateFromURL>http://clint/it/isdev/_vti_bin/lists.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
@@ -82,7 +82,7 @@
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Web References\IsDevListService\lists.disco" />
+    <None Include="Web References\ISDevListService\lists.disco" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

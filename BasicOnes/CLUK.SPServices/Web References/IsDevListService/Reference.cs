@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace CLUK.SPServices.IsDevListService {
+namespace CLUK.SPServices.ISDevListService {
     using System;
     using System.Web.Services;
     using System.Diagnostics;

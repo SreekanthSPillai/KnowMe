@@ -26,14 +26,14 @@ namespace KofaxTimerService
             // Namespace            Reference Name       Namespace              Reference Name
             //    |                      |                   |                        |
             //    V                      V                   V                        V
-            CLUK.SPServices.ISDevListService.Lists lists = new CLUK.SPServices.ISDevListService.Lists();
+            CLUK.SPServices.ISDevListService.Lists SPListService = new CLUK.SPServices.ISDevListService.Lists();
 
             // Make sure that you update the following URL to point to the Lists web service
             // for your SharePoint site.
-            lists.Url = "http://clint/it/isdev/_vti_bin/Lists.asmx";
+            SPListService.Url = "http://clint/it/isdev/_vti_bin/Lists.asmx";
             //lists.Url = "http://xyzteamsite/_vti_bin/Lists.asmx";
 
-            lists.Credentials = System.Net.CredentialCache.DefaultCredentials;
+            SPListService.Credentials = System.Net.CredentialCache.DefaultCredentials;
 
             XElement queryOptions = new XElement("QueryOptions",
                 new XElement("Folder"),
@@ -41,7 +41,44 @@ namespace KofaxTimerService
             );
 
             XElement viewFields = new XElement("ViewFields");
-            XElement listCollection = lists.GetListCollection().GetXElement();
+            XElement listCollection = SPListService.GetListCollection().GetXElement();
+
+            XmlDocument xmlDoc = new System.Xml.XmlDocument();
+
+            XmlNode ndQuery = xmlDoc.CreateNode(XmlNodeType.Element, "Query", "");
+            XmlNode ndViewFields =
+                xmlDoc.CreateNode(XmlNodeType.Element, "ViewFields", "");
+            XmlNode ndQueryOptions =
+                xmlDoc.CreateNode(XmlNodeType.Element, "QueryOptions", "");
+
+            ndQueryOptions.InnerXml = "<IncludeMandatoryColumns>FALSE</IncludeMandatoryColumns>" + "<DateInUtc>TRUE</DateInUtc>";
+            ndViewFields.InnerXml = "";//<FieldRef Name='Field1' /><FieldRef Name='Field2'/>
+            ndQuery.InnerXml = "";
+            //"<Where><And><Gt><FieldRef Name='Field1'/>" +  "<Value Type='Number'>5000</Value></Gt><Gt><FieldRef Name='Field2'/>" + "<Value Type='DateTime'>2003-07-03T00:00:00</Value></Gt></And></Where>";
+
+            XmlNode ndListItems = SPListService.GetListItems("LARApprovedUsers", null, ndQuery, ndViewFields, null, ndQueryOptions, null);
+
+            var counter = 0;
+            foreach (System.Xml.XmlNode node in ndListItems)
+            {
+                if (node.Name == "rs:data")
+                {
+                    for (int i = 0; i < node.ChildNodes.Count; i++)
+                    {
+                        if (node.ChildNodes[i].Name == "z:row")
+                        {
+                            var titleAttrib = node.ChildNodes[i].Attributes["ows_Title"];
+                            if (titleAttrib != null)
+                                WriteLog(titleAttrib.Value + "</br>");
+
+                            counter++;
+                        }
+                    }
+                }
+            }
+
+            WriteLog(string.Format("List Item Count: {0} ", counter));
+
             XElement report = new XElement("Report",
                 listCollection
                     .Elements(s + "List")
@@ -56,7 +93,7 @@ namespace KofaxTimerService
                                 l.Attribute("BaseType"),
                                 l.Attribute("ItemCount"),
                                 l.Attribute("ID"),
-                                lists.GetListItems((string)l.Attribute("ID"), "", null,
+                                SPListService.GetListItems((string)l.Attribute("ID"), "", null,
                                     viewFields.GetXmlNode(), "", queryOptions.GetXmlNode(), "")
                                     .GetXElement()
                                     .Descendants(z + "row")
@@ -88,7 +125,7 @@ namespace KofaxTimerService
     private void WriteLog(string message) 
     {
         string timeStamp = DateTime.Now.ToString("yyyyMMdd.hhmmss");
-        var path = Path.Combine(Path.GetDirectoryName(Assembly.GetCallingAssembly().Location),string.Format("ListService.{0}.log", timeStamp));
+        var path = Path.Combine(string.Format("C:\\ServiceRoot\\KofaxTimerService\\ListService.{0}.log", timeStamp));
 
         System.IO.File.AppendAllText(path, message + "\r\n");
     }
